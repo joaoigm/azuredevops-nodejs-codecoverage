@@ -1,0 +1,42 @@
+{
+  "name": "azuredevops-nodejs-codecoverage",
+  "version": "1.0.0",
+  "description": "Node project with unit test and sonarqube collecting code coverage",
+  "main": "run.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaoigm/azuredevops-nodejs-codecoverage.git"
+  },
+  "keywords": [
+    "node",
+    "code",
+    "coverage",
+    "sonarqube"
+  ],
+  "author": "João Igor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joaoigm/azuredevops-nodejs-codecoverage/issues"
+  },
+  "homepage": "https://github.com/joaoigm/azuredevops-nodejs-codecoverage#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.21",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0"
+  },
+  "dependencies": {
+    "typescript": "^3.6.4"
+  }
+}
