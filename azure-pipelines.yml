@@ -27,7 +27,7 @@ steps:
       # Additional properties that will be passed to the scanner, 
       # Put one key=value per line, example:
       sonar.exclusions=**/node_modules/*
-      sonar.typescript.lcov.reportPaths=./coverage
+      sonar.javascript.lcov.reportPaths=coverage
 
 - script: |
     npm install
