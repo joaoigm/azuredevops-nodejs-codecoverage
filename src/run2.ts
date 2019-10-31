@@ -1,5 +1,5 @@
 class run2 {
-    hello():String {
+    hello():string {
         return "Hello";
     }
 }
