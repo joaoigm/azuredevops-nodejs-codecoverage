@@ -14,8 +14,27 @@ steps:
   inputs:
     versionSpec: '12.x'
   displayName: 'Install Node.js'
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'mysonarcloud'
+    organization: 'joaoigm-public-projets'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'azuredevops-nodejs-codecoverage'
+    cliProjectVersion: '$(Build.SourceVersion)'
+    cliSources: '.'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner, 
+      # Put one key=value per line, example:
+      sonar.exclusions=**/node_modules/*
+      sonar.typescript.lcov.reportPaths=./coverage
 
 - script: |
     npm install
     npm test
   displayName: 'npm install and test'
+
+- task: SonarCloudAnalyze@1
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
