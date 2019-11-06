@@ -32,6 +32,7 @@ steps:
 - script: |
     npm install
     npm test
+    ls -la
   displayName: 'npm install and test'
 
 - task: SonarCloudAnalyze@1
